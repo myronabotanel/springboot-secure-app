@@ -4,6 +4,8 @@ import com.example.demo.dto.UserDto;
 import com.example.demo.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.Mapping;
+
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -44,4 +46,5 @@ public class UserMapper {
                 .map(userDto -> userDtoToEntity(userDto, password))
                 .toList();
     }
+
 }
