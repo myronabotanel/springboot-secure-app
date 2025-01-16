@@ -30,6 +30,7 @@ public class SecurityConfig {
                     authConfig.requestMatchers(HttpMethod.GET, "/developer").hasAuthority("DEVELOPER");
                     authConfig.requestMatchers(HttpMethod.GET, "/users").hasAnyAuthority("ADMIN", "DEVELOPER");
                     authConfig.requestMatchers(HttpMethod.GET, "/authorities").hasAnyAuthority("ADMIN", "DEVELOPER");
+
                     authConfig.anyRequest().authenticated();
                 })
                 .formLogin(login -> {
